@@ -1,0 +1,236 @@
+header {
+    position: sticky;
+    top: 0;
+    padding-top: 0.1rem;
+    background-color: #80d19b;
+    z-index: 999;
+  }
+
+.logo {
+    display: flex;
+    float: left;
+    margin: 0.5rem;
+    width: 100px;
+}
+ .busqueda {
+    display: flex;
+    position: relative;
+    width: 50%;
+    justify-content: space-around;
+    margin: 1rem;
+ }
+
+ .busqueda input {
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem;
+    width: 400px;
+ }
+ 
+ .lupa {
+    position: absolute;
+    margin-left: 348px;
+    margin-top: 2px;
+    background-color: #fc585F;
+    text-align: center;
+    width: 45px;
+    height: 35px;
+    border-radius: 20px;
+ }
+
+ .lupa img {
+    position: relative;
+    width: 30px;
+    padding: 2px;
+ }
+  nav {
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+  }
+  
+
+  .nav-menu {
+    position: fixed;
+    display: contents;
+    top: -2rem;
+    right: -200vh;
+    height: 100vh;
+    width: 45vw;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    background: #80d19b;
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
+  }
+  
+  .nav-menu.is-active {
+    top: 0;
+    right: 0;
+    margin: 0;
+    box-shadow: 0 1rem 5rem 0 rgba(0, 0, 0, 0.3);
+  }
+  
+  /**************************
+  /* HAMBURGER, MENU-BAR STYLING 
+  **************************/
+  .hamburger {
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    padding: 0;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .hamburger.is-active {
+    position: fixed;
+    top: 1rem;
+    right: 2rem;
+    background: #80d19b;
+  }
+  
+  .menu-bar {
+    position: relative;
+    width: 100%;
+  }
+  
+  .menu-bar,
+  .menu-bar::before,
+  .menu-bar::after {
+    height: 0.2rem;
+    border-radius: 0.5rem;
+    background: #457344;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .menu-bar::before {
+    position: absolute;
+    content: "";
+    top: -1.1rem;
+    right: 0;
+    width: 70%;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .menu-bar::after {
+    position: absolute;
+    content: "";
+    bottom: -1.1rem;
+    right: 0;
+    width: 70%;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .menu-bar.is-active {
+    background: transparent;
+  }
+  
+  .menu-bar.is-active::before {
+    width: 100%;
+    transform: rotate(45deg) translateX(1.5rem);
+  }
+  
+  .menu-bar.is-active::after {
+    width: 100%;
+    transform: rotate(-45deg) translateX(1.5rem);
+  }
+  
+  /* ***********************
+  /* NAV LINKS STYLES
+  *************************/
+  .nav-link a {
+    color: rgb(24, 33, 24);
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .nav-link a:hover {
+    
+    color: #277005;
+  }
+  
+
+  @media screen and (max-width: 719px) {
+
+  
+    header {
+      width: 100%;
+    }
+    .busqueda {
+      display: none;
+    }
+}
+  @media screen and (max-width: 1023px) {
+
+  
+    header {
+      width: 100%;
+      height: 100px;
+    }
+    .lupa {
+      margin-left: 80%;
+    }
+}
+  
+  @media screen and (min-width: 1024px) {
+
+    header {
+      width: 100%;
+      height: 100px;
+    }
+ 
+  }
+  
+  @media screen and (min-width: 1280px) {
+
+  
+    header {
+      width: 100%;
+    }
+  
+    nav {
+      justify-content: space-between;
+      
+    }
+  
+    nav > a {
+      display: block;
+    }
+  
+    .nav-menu {
+      width: 100%;
+      position: static;
+      height: 2rem;
+      margin: 0;
+      justify-content: center;
+      flex-direction: row;
+      gap: 3rem;
+      background: #96edb5;
+    }
+  
+    .hamburger {
+      display: none;
+    }
+  
+  }
+  
+  @media screen and (min-width: 1440px) {
+   
+    header {
+      width: 100%;
+    }
+  
+  }
